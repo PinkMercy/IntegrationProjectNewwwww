@@ -29,6 +29,7 @@ import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { FakeBackendInterceptor } from './core/helpers/fake-backend';
 import { ToastrModule } from 'ngx-toastr';
 import { DashboardComponent } from './dash-responsable/dashboard/dashboard.component';
+import { EventdetailComponent } from './home/eventdetail/eventdetail.component';
 
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);

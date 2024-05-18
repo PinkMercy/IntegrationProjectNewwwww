@@ -1,0 +1,28 @@
+/* src/app/home/homepage/homepage.component.scss */
+@import "../../../assets/css/bootstrap.css";
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: papayawhip; // Use Bootswatch variable for background color
+    border: 1px solid gainsboro; // Use Bootswatch variable for border color
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+  
+    h2 {
+      margin-top: 0;
+    }
+  
+    p {
+      margin-bottom: 0;
+    }
+  }
+  

@@ -1,1 +1,103 @@
-<p>homepage works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    .background-image {
+      background-image: url('../../../assets/images/events2.jpeg'); /* Replace with the path to your image */
+      background-size: cover;
+      background-position: center;
+      height: 300px; /* Adjust height as needed */
+      width: 100%;
+    }
+
+    .card-container {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      margin: 10px;
+      width: 300px; /* Adjust card width as needed */
+    }
+
+    .card-body {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .card-title {
+      font-size: 1.25em;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <div class="background-image"></div>
+
+  <!-- src/app/home/homepage/homepage.component.html -->
+  <div class="card-container">
+    <div class="card" *ngFor="let event of events">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.libelle }}</h5>
+        <p class="card-text">{{ event.description }}</p>
+        <!-- <img class="card-img-top"src='{{ event.img }}'> -->
+        <!-- <img src="../../../assets/images/ieee.jpg" class="card-img-top" alt="..."> -->
+        <br>
+        <a [routerLink]="['/eventdetail', event.id]" class="btn btn-primary">buy a ticket</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="card-container">
+    <div class="card" *ngFor="let club of clubs">
+      <div class="card-body">
+        <h5 class="card-title">{{ event.nom }}</h5>
+        <p class="card-text">{{ event.desc }}</p>
+        <img src="../../../assets/images/event1.png" class="card-img-top" alt="...">
+        <a href="#" class="btn btn-primary"> Go somewhere</a>
+      </div>
+    </div>
+  </div> -->
+  <div class="card-container">
+    <div class="card" *ngFor="let club of clubs">
+      <div class="card-body">
+        <h5 class="card-title">{{club.nom}}</h5>
+        <p class="card-text">{{club.desc}}</p>
+        <img class="card-img-top"src='{{club.img}}'>
+        <!-- <a href="#" class="btn btn-primary"> Go somewhere</a> -->
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

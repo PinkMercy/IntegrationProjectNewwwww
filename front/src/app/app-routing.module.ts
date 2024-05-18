@@ -5,6 +5,8 @@ import { LayoutComponent } from './layouts/layout.component';
 import { CyptolandingComponent } from './cyptolanding/cyptolanding.component';
 import { Page404Component } from './extrapages/page404/page404.component';
 import { guardGuard } from './auth/guard/guard.guard';
+import { HomepageComponent } from './home/homepage/homepage.component';
+import { EventdetailComponent } from './home/eventdetail/eventdetail.component';
 
 const routes: Routes = [
   // tslint:disable-next-line: max-line-length
@@ -29,7 +31,12 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'home'
-  }
+  },
+
+   { path: '', component: HomepageComponent },
+    { path: 'eventdetail/:id', component: EventdetailComponent },
+    // Add more routes here if needed
+    
 ];
 
 @NgModule({
